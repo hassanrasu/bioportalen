@@ -2,13 +2,14 @@
     "use strict";
     jQuery(document).ready(function ($) {
         $('.hero-slider').slick({
-            dots: false,
+            dots: true,
             arrows: false,
             infinite: true,
             speed: 300,
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
+            fade:true,
             autoplay: true,
 
         });

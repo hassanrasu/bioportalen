@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
     margin: 0;
@@ -149,7 +150,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999
+    z-index: 9
 }
 
 .site-logo {
@@ -234,8 +235,232 @@ section {
 }
 
 .hero-item {
-    height: 800px;
+    height: 1000px;
     display: flex;
     align-items: center;
     position: relative;
+    padding-top: 100px
+}
+
+.hero-item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.hero-text .tags {
+    display: inline-block;
+    letter-spacing: 1px;
+    color: #2f80ed;
+    border-left: 2px solid #2f80ed;
+    padding-left: 10px;
+}
+
+.hero-text .title {
+    font-size: 80px;
+    color: #fff;
+    line-height: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px
+}
+
+.hero-meta li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    padding-right: 10px;
+    margin-right: 10px;
+    position: relative
+}
+
+.hero-meta li::after {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    content: ""
+}
+
+.hero-meta li:last-child::after {
+    display: none
+}
+
+.hero-meta li img {
+    height: 24px;
+    margin-right: 8px
+}
+
+.m_tags {
+    background: #2f80ed;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px !important;
+}
+
+.video-play-button {
+    position: relative;
+    z-index: 10;
+    box-sizing: content-box;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px
+}
+
+.video-play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.87);
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+.video-play-button svg {
+    position: relative;
+    width: 28px;
+    z-index: 11;
+    height: 28px;
+    stroke: #2f80ed
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.play_btn > span {
+    padding-left: 30px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.btn_default {
+    background: #2f80ed;
+    color: #fff
+}
+
+.group_btn {
+    display: flex;
+    align-items: center;
+}
+
+.group_btn .cta-btn {
+    margin-right: 40px
+}
+
+.hero-text .group_btn {
+    margin-top: 50px
+}
+
+.hero-text p {
+    font-size: 18px
+}
+
+.hero-slider .slick-dots {
+    position: absolute;
+    bottom: 35px;
+    z-index: 1;
+}
+
+.slick-dots li {
+    width: auto;
+}
+
+.slick-dots li button {
+    width: 12px;
+    height: 4px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.4s ease 0s;
+}
+
+.slick-dots li.slick-active button {
+    background: #fff;
+    width: 22px;
+}
+
+.slick-dots li.slick-active button {
+    background: #fff;
+    width: 22px;
+}
+
+.slick-dots li button::before {
+    display: none
+}
+
+.hero-item {
+    position: relative;
+}
+
+.hero-item:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -2px;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.51%, #131720 100%);
+    z-index: 1
+}
+
+.hero-text {
+    position: relative;
+    z-index: 11
 }
