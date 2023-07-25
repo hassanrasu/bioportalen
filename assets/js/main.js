@@ -9,12 +9,12 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
-            fade:true,
+            fade: true,
             autoplay: true,
 
         });
 
-        
+
 
         $(".mainmenu ul li:has(ul)").addClass("has-submenu");
         $(".mainmenu ul li:has(ul)").addClass("small-submenu");
@@ -49,8 +49,11 @@
         $(".mainmenu ul li:has(ul)");
 
 
-
-
+        $(window).on('load', function () {
+            $('.pageLoader').fadeOut('1000', function () {
+                $(this).remove();
+            });
+        });
 
     });
 
@@ -58,6 +61,3 @@
 
 }(jQuery));
 
-jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.2
-});

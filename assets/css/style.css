@@ -143,6 +143,26 @@ section {
 .container-fluid {
     padding: 0 100px
 }
+#camera-body,
+#reel-1,
+#reel-2 {
+	fill: #fff;
+	fill-opacity: 0.95;
+	stroke: none;
+}
+.pageLoader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #131720;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
 
 .header-area {
     padding: 30px 0;
@@ -150,7 +170,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9
+    z-index: 9;
 }
 
 .site-logo {
@@ -456,7 +476,7 @@ section {
     height: 100%;
     bottom: -2px;
     left: 0;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.51%, #131720 100%);
+    background-image: linear-gradient(180deg, rgba(34, 31, 31, 0.34) 44.51%, #131720 100%);
     z-index: 1
 }
 
@@ -464,3 +484,4 @@ section {
     position: relative;
     z-index: 11
 }
+
