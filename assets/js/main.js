@@ -93,12 +93,6 @@
         $(".mainmenu ul li:has(ul)");
 
 
-        $(window).on('load', function () {
-            $('.pageLoader').fadeOut('1000', function () {
-                $(this).remove();
-            });
-        });
-
     });
 
 
