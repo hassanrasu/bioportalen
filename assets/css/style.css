@@ -142,14 +142,16 @@ section {
 .container-fluid {
     padding: 0 100px
 }
+
 #camera-body,
 #reel-1,
 #reel-2 {
-	fill: #fff;
-	fill-opacity: 0.95;
-	stroke: none;
+    fill: #fff;
+    fill-opacity: 0.95;
+    stroke: none;
 }
-.pageLoader{
+
+.pageLoader {
     position: fixed;
     top: 0;
     left: 0;
@@ -483,40 +485,47 @@ section {
     z-index: 11
 }
 
-.movie-slider-1 .slide{
+.movie-slider-1 .slide {
     padding: 0 15px
 }
-.movie-slider-1 .slick-list{
+
+.movie-slider-1 .slick-list {
     margin-left: -15px;
     margin-right: -15px
 }
-.movie-box .img img{
-    height: 430px;
+
+.movie-box .img img {
+
     width: 100%;
     object-fit: cover;
     border-radius: 10px
 }
+
 .movie-box .video-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.4s;
     visibility: hidden
 }
-.movie-box .img-inner{
+
+.movie-box .img-inner {
     position: relative;
 }
-.movie-box .img{
+
+.movie-box .img {
     border-radius: 10px;
     overflow: hidden;
 }
-.movie-box .img a{
+
+.movie-box .img a {
     position: relative;
     z-index: 1
 }
-.movie-box .img a::after{
+
+.movie-box .img a::after {
     position: absolute;
     left: -25%;
     top: -50%;
@@ -532,26 +541,31 @@ section {
     -webkit-transition: all 400ms linear;
     transition: all 400ms linear;
 }
+
 .movie-box:hover .img a::after {
     height: 200%;
     opacity: 0.6;
 }
-.movie-box:hover .video-play-button{
+
+.movie-box:hover .video-play-button {
     opacity: 1;
     visibility: visible
 }
+
 .site-heading .heading {
     font-size: 34px;
     text-transform: capitalize;
     font-weight: 500;
     line-height: 100%
 }
-.s1_arrows{
+
+.s1_arrows {
     display: flex;
     align-items: center;
     justify-content: flex-end
 }
-.s1_arrows li{
+
+.s1_arrows li {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -562,26 +576,34 @@ section {
     background: #0d1017;
     margin-left: 10px
 }
-.movie-slider-1{
+
+.movie-slider-1 {
     margin-top: 40px
 }
-.movie-box .text{
+
+.movie-box .text {
     padding-top: 15px
 }
-.movie-box .title{
+
+.movie-box .title,
+.movie-box .title a {
     font-weight: 500;
     font-size: 22px;
     color: #fff;
     margin-bottom: 5px
 }
-.movie-box .genre a, .movie-box .genre{
+
+.movie-box .genre a,
+.movie-box .genre {
     font-size: 13px;
     color: #0A84FF
 }
-.movie-box .rls_date a{
+
+.movie-box .rls_date a {
     color: #617798;
     font-size: 13px
 }
-.movie-box .genre{
+
+.movie-box .genre {
     margin-left: 15px
 }
