@@ -57,6 +57,50 @@
                 }
               ]
         });
+        
+        $('.movie-slider-2').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            centerMode: false,
+            prevArrow: $('.s2_prev'),
+            nextArrow: $('.s2_next'),
+            responsive: [
+                {
+                    breakpoint: 1050,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 650,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+              ]
+        });
 
 
 

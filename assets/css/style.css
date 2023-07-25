@@ -464,11 +464,11 @@ section {
     z-index: 11
 }
 
-.movie-slider-1 .slide {
+.movie-slider-1 .slide, .movie-slider-2 .slide {
     padding: 0 15px
 }
 
-.movie-slider-1 .slick-list {
+.movie-slider-1 .slick-list, .movie-slider-2 .slick-list {
     margin-left: -15px;
     margin-right: -15px
 }
@@ -484,7 +484,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     opacity: 0;
     transition: all 0.4s;
     visibility: hidden
@@ -523,12 +523,20 @@ section {
 
 .movie-box:hover .img a::after {
     height: 200%;
-    opacity: 0.6;
+    opacity: 0;
 }
-
+.movie-box img{
+    transition: all 0.4s
+}
+.movie-box:hover img {
+    transform: scale(1.06);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
 .movie-box:hover .video-play-button {
     opacity: 1;
-    visibility: visible
+    visibility: visible;
+    transform: translate(-50%, -50%)  scale(1)
 }
 
 .site-heading .heading {
@@ -556,7 +564,7 @@ section {
     margin-left: 10px
 }
 
-.movie-slider-1 {
+.movie-slider-1, .movie-slider-2 {
     margin-top: 40px
 }
 
@@ -590,4 +598,133 @@ section {
 
 .movie-box .genre {
     margin-left: 15px
+}
+.today-theatre-area .heading {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 15px;
+}
+
+.today-theatre-area p {
+    font-size: 22px;
+}
+.theatre-img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative
+}
+.theatre-img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    background: rgba(19, 23, 32, 0.40);
+    z-index: 1;
+}
+.theatre-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+.today-theatre-area{
+    position: relative;
+    background: #131A25;
+    z-index: 1
+}
+.today-theatre-area::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: #131720;
+    z-index: -1
+}
+.theatre-img .video-play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.site-heading.alt .heading{
+    position: relative;
+    padding: 25px
+}
+.site-heading.alt .heading::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 5px;
+    width: 110px;
+    background: #4FA4E3;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.movie-box.alt{
+    margin-top: 30px
+}
+.movie-box.alt .title a{
+    font-size: 18px
+}
+.cta-area{
+    padding: 150px 0;
+    position: relative;
+}
+.cta-area::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #131720;
+    opacity: 0.8
+}
+.cta-inner{
+    position: relative;
+    z-index: 1
+}
+.cta-inner .heading{
+    font-size: 50px;
+    font-weight: 500;
+    
+}
+.cta-inner p{
+    font-size: 22px;
+    line-height: 30px
+}
+.cta-inner form{
+    width: 600px;
+    height: 65px;
+    position: relative;
+    background: #fff;
+    border-radius: 40px;
+    margin: 30px auto 0
+}
+.cta-inner form input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 30px;
+    padding-right: 70px
+}
+.cta-inner form  button{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cta-inner form  button svg{
+    stroke:#2f80ed
 }
